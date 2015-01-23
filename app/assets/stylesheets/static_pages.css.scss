@@ -1,15 +1,74 @@
+.option-page-text{
+  font-size: 30px;
+  padding: 10px 10px 10px 30px;
+}
 
-.locations-img{
-  width:300px;
+.locations-img-central{
+  width: 300px;
   height: 300px;
   border: 5px;
   border-style: solid;
   border-color: black;
   background-image: image-url("locations-central.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 10px 10px;
+}  
+
+.locations-img-tst{
+  width: 300px;
+  height: 300px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  background-image: image-url("locations-tst.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 50px 10px;
 }
 
-/*.grey-box{
-  width:300px;
-  height:50px;
-  background-color:rgba(157, 159, 162, 0.8);*/
-/*}*/
+.locations-img-cwb{
+  width: 300px;
+  height: 300px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  background-image: image-url("locations-cwb.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 50px 10px;
+}
+
+.btn-border{
+  margin: 200px 100px 50px 100px;
+}
+
+.cuisines-img-chinese{
+  width: 300px;
+  height: 300px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  background-image: image-url("cuisines-chinese.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 50px 10px;
+}  
+
+.cuisines-img-japanese{
+  width: 300px;
+  height: 300px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  background-image: image-url("cuisines-japanese.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 50px 10px;
+}
+
+.cuisines-img-westen{
+  width: 300px;
+  height: 300px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  background-image: image-url("cuisines-westen.jpg");
+  background-repeat: no-repeat;
+  margin: 20px 10px 50px 10px;
+}
