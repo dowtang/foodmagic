@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-  <body>
-    <div class="container">
+  <body class="body">
+    <div class="container-fluid">
 
       <header id="header" class="header">
         <div class="row">
@@ -17,13 +17,17 @@
         </div>
         <div class="row">
           <div class="col-xs-3">
-            header left
+            Search
+            <%#= link_to "Search", search_path, :method => :get %>
+            Home
           </div>
-          <div class="col-xs-6">
-            header center
+          <div class="col-xs-6 LCR">
+            Locations
+            / Cuisines
+            / Reviews
           </div>
-          <div class="col-xs-3">
-            header right
+          <div class="col-xs-3 header-right">
+            Order Cart
           </div>
         </div>
       </header>
@@ -37,30 +41,48 @@
       <footer id="footer" class="footer">
         <div class="row">
           <div class="col-xs-3">
-            footer 1 title
+            CUSTOMER SERVICES 
           </div>
           <div class="col-xs-3">
-            footer 2 title
+            LATEST FROM FOODMAGIC
           </div>
           <div class="col-xs-3">
-            footer 3 title
+            OUR COMPANY
           </div>
           <div class="col-xs-3">
-            footer 4 title
+            RELATED FOODMAGIC SITES
           </div>
         </div>
         <div class="row">
           <div class="col-xs-3">
-            footer 1
+            Hong Kong 852 2345 6789
+            Your Account
+            Email Customer Service
+            Frequently Asked Questions
+            Privacy Policy
           </div>
           <div class="col-xs-3">
-            footer 2
+            Facebook
+            Instagram
+            Pinterest
+            Twitter
+            Tumblr
+            YouTube
+            Google
           </div>
           <div class="col-xs-3">
-            footer 3
+            Corporate Responsibility
+            Investors
+            FoodMagic Careers
+            Accessibility
           </div>
           <div class="col-xs-3">
-            footer 4
+            FoodMagic for the Press
+            Mobile Site
+
+            What Makes Food True
+
+            The FoodMagic Foundation
           </div>
         </div>
       </footer>
