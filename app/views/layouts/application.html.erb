@@ -6,28 +6,26 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-  <body class="body">
-    <div class="container-fluid">
-
+  <body>
+    <div>
       <header id="header" class="header">
         <div class="row">
           <div class="logo">
             FoodMagic
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-3">
-            Search
-            <%#= link_to "Search", search_path, :method => :get %>
-            Home
+        <div class="row index-buttons">
+          <div class="col-xs-2">
+            Search Home
           </div>
 
-          <div class="col-xs-6 LCR">
-            <button id="button-locations">Locations</button>
-            <button id="button-cuisines">Cuisines</button><button id="button-reviews">Reviews</button>
+          <div class="col-xs-8 header-buttons">
+            <button type="button" class="btn btn-default" id="button-locations">Locations</button>
+            <button type="button" class="btn btn-default" id="button-cuisines">Cuisines</button>
+            <button type="button" class="btn btn-default" id="button-reviews">Reviews</button>
           </div>
 
-          <div class="col-xs-3 header-right">
+          <div class="col-xs-2">
             Order Cart
           </div>
         </div>

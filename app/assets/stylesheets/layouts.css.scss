@@ -1,23 +1,40 @@
-.logo{
-  font-family: "Andale Mono", arial; 
-  font-size: 60px;
-  text-align: center;
+
+.body{
+  /*text-align: center;*/
+  height: 100%;
+  /*text-align: center;*/
 }
 
-.container-fluid{
-  height: 100%;
+.header{
   background-color: rgba(148, 210, 186, 0.8);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*text-align: center;*/
+}
+
+.logo{
+  font-family: "Arial"; 
+  font-size: 60px;
+  text-align: center;
+  color: black;
 }
 
 .main{
-  width: 1400px;
+  /*width: 1400px;*/
   background-color: white;
 }
 
-.LCR{
+.header-buttons{
   text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: "Arial";
+
+
 }
 
-.header-right{
-  text-align: right;
+.index-buttons{
+  background-color: midnightblue;
 }
+
