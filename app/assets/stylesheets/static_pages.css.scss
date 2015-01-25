@@ -1,13 +1,21 @@
 
-.locations-img{
-  width:300px;
+.locations-img-central{
+  width: 200px;
   height: 300px;
-  border: 5px;
-  border-style: solid;
-  border-color: black;
-  background-image: image-url("locations-central.jpg");
+  margin: 20px 0px 20px 30px;
 }
 
+.locations-img-tst{
+  width: 200px;
+  height: 300px;
+  margin: 20px 0px 20px 0px;
+}
+
+.locations-img-cwb{
+  width: 200px;
+  height: 300px;
+  margin: 20px 0px 20px 30px;
+}
 /*.grey-box{
   width:300px;
   height:50px;
