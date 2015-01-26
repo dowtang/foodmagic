@@ -7,94 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-    <div>
-      <header id="header" class="header">
+    <%= render "layouts/header" %>
 
-        <div class="row">
-          <div class="logo">
-            FoodMagic
-          </div>
-        </div>
+    <main id="main" class="main">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </main>
 
-        <div class="row">
+    <%= render "layouts/footer" %>
 
-          <div class="col-xs-2 header-search">
-            Search Home
-          </div>
-
-          <div class="col-xs-8 header-buttons">
-            <button type="button" class="btn btn-default" id="button-locations">Locations</button>
-            <button type="button" class="btn btn-default" id="button-cuisines">Cuisines</button>
-            <button type="button" class="btn btn-default" id="button-reviews">Reviews</button>
-          </div>
-
-          <div class="col-xs-2 header-order-cart">
-            Order Cart
-          </div>
-
-        </div>
-
-      </header>
-
-      <main id="main" class="main">
-        <div class="row">
-          <%= yield %>
-        </div>
-      </main>
-
-      <footer id="footer" class="footer">
-      
-        <div class="row">
-          <div class="col-xs-3 bottom-footer">
-            CUSTOMER SERVICES 
-          </div>
-          <div class="col-xs-3 bottom-footer">
-            LATEST FROM FOODMAGIC
-          </div>
-          <div class="col-xs-3 bottom-footer">
-            OUR COMPANY
-          </div>
-          <div class="col-xs-3 bottom-footer">
-            RELATED FOODMAGIC SITES
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="footer-contents">
-            <div class="col-xs-3">
-              Hong Kong 852 2345 6789
-              Your Account
-              Email Customer Service
-              Frequently Asked Questions
-              Privacy Policy
-            </div>
-            <div class="col-xs-3">
-              Facebook
-              Instagram
-              Pinterest
-              Twitter
-              Tumblr
-              YouTube
-              Google
-            </div>
-            <div class="col-xs-3">
-              Corporate Responsibility
-              Investors
-              FoodMagic Careers
-              Accessibility
-            </div>
-            <div class="col-xs-3">
-              FoodMagic for the Press
-              Mobile Site
-
-              What Makes Food True
-
-              The FoodMagic Foundation
-            </div>
-          </div>
-        </div>
-      </footer>
-
-    </div>
   </body>
 </html>
