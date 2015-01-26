@@ -1,17 +1,14 @@
 
 .body{
-  /*text-align: center;*/
   height: 100%;
-  /*text-align: center;*/
+  font-family: "Times New Roman", Georgia, serif ;
 }
 
 .header{
-  font-family: arial;
   background-color: rgba(148, 210, 186, 0.6);
   margin: 0;
   padding: 0;
   border: 0;
-  /*text-align: center;*/
 }
 
 .footer{
@@ -19,12 +16,10 @@
   margin: 0;
   padding: 0;
   border: 0;
-  /*text-align: center;*/
 }
 
 .logo{
-  font-family: arial; 
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
   color: black;
 }
@@ -38,27 +33,21 @@
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-family: arial;
 }
 
 .header-search{
   text-align: left;
   padding-top: 10px;
-  /*margin-left: 10px;
-  margin-top: 10px;*/
 }
 
 .header-order-cart{
   text-align: right;
   padding-top: 10px;
-  /*margin-left: 1040px;
-  margin-top: 10px;*/
 }
 
 .bottom-footer{
-  margin-top: 10px; 
-  border-top: 10px;
-  border-top-color: black;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
 }
 
 .footer-contents{
