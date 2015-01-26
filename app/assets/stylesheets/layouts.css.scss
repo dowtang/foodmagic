@@ -30,8 +30,8 @@
 }
 
 .main{
-  /*width: 1400px;*/
   background-color: white;
+  height: 100%;
 }
 
 .header-buttons{
@@ -41,21 +41,26 @@
   font-family: arial;
 }
 
-.header-links-search{
+.header-search{
   text-align: left;
-  margin-bottom: 10px;
-  margin-top: 10px;
   margin-left: 10px;
-}
-
-.footer{
-  background-color: rgba(148, 210, 186, 0.8);
   margin-top: 10px;
 }
 
-.header-links-order-cart{
-  float: right;
- /* margin-bottom: 10px;
-  margin-top: 10px;*/
-  margin-right: 5px;
+.header-order-cart{
+  text-align: right;
+  margin-left: 1040px;
+  margin-top: 10px;
 }
+
+.bottom-footer{
+  margin-top: 10px; 
+  border-top: 10px;
+  border-top-color: black;
+}
+
+.footer-contents{
+  border-top: 5px;
+  border-color: black;
+}
+
