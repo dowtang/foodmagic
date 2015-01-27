@@ -13,66 +13,58 @@
   margin-bottom: 10px;
 }
 
-.grey-box-outline{
+.restaurant-box{
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
   border-color: rgba(212, 212, 217, 1);
-  height: 40%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-/*.dark-grey-box{
+.logo-img{
+  /* Add the style for the image */
+}
+
+.restaurant-header{
   background-color: rgba(212, 212, 217, 1);
   height: 25%;
-  width: 100%;
+  /*width: 100%;*/
 }
 
-.light-grey-box{
+.restaurant-main{
   background-color: rgba(237, 238, 243, 1);
   height: 75%;
-}*/
-
-/*.dark-green-box{
-  background-color: rgba(194, 242, 218, 0.6);
-  height: 25%;
-  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
-.light-green-box{
-  background-color: rgba(217, 255, 241, 0.4);
-  height: 75%;
-}*/
-
-.dark-orange-box{
-  background-color: rgba(255, 151, 101, 0.6);
-  height: 25%;
-  width: 100%;
+.restaurant-info p {
+  /*style for the restaurant info*/
+}
+.restaurant-info-title {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.light-orange-box{
-  background-color: rgba(255, 187, 149, 0.6);
-  height: 75%;
+.restaurant-cuisine-type {
+  /*style for the cuisine type*/
 }
 
-.restaurant-details{
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.restaurant-button{
+/*.restaurant-button{
   margin-top: 80px;
 }
-
+*/
 .restaurant-name{
   font-size: 20px;
+  margin-left: 40px;
+  font-weight: bold;
 }
 
 .restaurant-location{
   font-size: 10px;
+  margin-left: 30px;
 }
 
-.reviewcount{
+.review-count{
   float: left;
 }
