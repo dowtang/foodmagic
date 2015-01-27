@@ -54,17 +54,18 @@ namespace :scrape_foodpanda do
       # paymenttypes = html_doc.css(data_format_payment_type)
       reviewcounts = html_doc.css(data_format_review_count)
       vendorinfos = html_doc.css(data_format_vendor_info)
+      menuurls = html_doc.css(data_format_menu_url)
 
       names.each_with_index do |name, index|
 
         puts "-------------------"
-        # puts index
-        # puts "NAME>> #{name.text}"
+        puts index
+        puts "NAME>> #{name.text}"
         # puts "CUISINE>> #{cuisinetypes[index].text}"
         # puts "LOCATION>> #{locations[index].text}"
         # puts "LOGO URL>> #{logourls[index]}"
         puts "LOGO URL>> http:#{logourls[index].attr("data-src")}"
-
+        puts "MENU URL>> http:/#{menuurls[index].attr("href")}"
         # puts "NUMBER OF REVIEWS>> #{reviewcounts[index].text.squish}"
         # puts "VENDOR INFO>> #{vendorinfos[index].css('.vendor-delivery-time')}"
         # puts "VENDOR INFO>> #{vendorinfos[index]}"
@@ -111,6 +112,7 @@ namespace :scrape_foodpanda do
           :cuisinetype => cuisinetypes[index].text, 
           :location => locations[index].text, 
           :logourl => "http:#{logourls[index].attr("data-src")}",
+          :menuurl => "http:/#{menuurls[index].attr("href")}",
           :deliverytime => delivery_time, 
           :deliverycost => delivery_fee, 
           :minimumorder => delivery_minimum, 
