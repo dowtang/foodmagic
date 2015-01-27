@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-2">
   </div>
-  <h3 class="col-xs-8">Order from 30 restaurants in Central</h3>
+  <h3 class="col-xs-8 bold-text">Order from 30 restaurants in Central</h3>
   <div class="col-xs-2">
   </div>
 </div>
@@ -13,14 +13,27 @@
       </div>
 
       <div class="col-xs-8 restaurant-white-box">
+
+
+        <!-- I WANT TO REPEAT THIS CODE FOR EACH ONE OF THE RESTAURANTS -->
+      <% @restaurants.each do |restaurant| %>
+
         <div class="col-xs-12 grey-box-outline">
           <div class="col-xs-12 dark-green-box">
-            <div class="col-xs-12">
-            Shanghai Lane central
+
+            <div class="col-xs-12 restaurant-name bold-text">
+            <%= restaurant.name %>
             </div>
-            <div class="col-xs-12">
-            35-37 Gough Street, Central, Hong Kong
+
+            <div class="row">
+              <div class="col-xs-9 restaurant-location">
+                <%= restaurant.location %>
+              </div>
+              <div class="col-xs-3 reviewcount">
+                <%= restaurant.reviewcount %>
+              </div>
             </div>
+
           </div>
           <div class="col-xs-12 light-green-box">
             <div class="row restaurant-details">
@@ -31,22 +44,37 @@
 
               <div class="col-xs-6">
                 <div class="col-xs-12">
-                Chinese, Hong Kong
+                   <div class="col-xs-4">
+                  <%= restaurant.cuisinetype %>
+                  </div>
                 </div>
                 <div class="col-xs-12">
-                Delivery in 1h
+                  <div class="col-xs-4 bold-text">
+                  Delivery in 
+                  </div>
+                  <div class="col-xs-8">
+                  <%= restaurant.deliverytime %>
+                  </div>
+                </div>
+                <div class="col-xs-12 bold-text">
+                  <div class="col-xs-4 bold-text">
+                  <%= restaurant.deliverycost %>
+                  </div>
                 </div>
                 <div class="col-xs-12">
-                Free delivery
+                  <div class="col-xs-4 bold-text">
+                  Delivery min:
+                  </div>
+                  <div class="col-xs-8">
+                  <%= restaurant.minimumorder %>
+                  </div>
                 </div>
                 <div class="col-xs-12">
-                Delivery min: HK$100.00
+                <%= restaurant.paymenttype %>
                 </div>
-                <div class="col-xs-12">
-                Online Payment
-                </div>
+                
               </div>
-
+        
               <div class="col-xs-3 restaurant-button">Button
               <%#= button_to "Menu", menu_path, method: :get, :class="btn btn-sm btn-success" %>
               </div>
@@ -54,11 +82,15 @@
             </div>
           </div>
         </div>
+
+      <!-- THIS IS THE END OF MY SINGLE RESTAURANT (GREY BOX) -->
+      <% end %>
+
       </div>  
 
       <div class="col-xs-2">
       </div>
-
+    </div>
   </div>
 
 </div>
