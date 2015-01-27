@@ -11,9 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127030604) do
+ActiveRecord::Schema.define(version: 20150126074634) do
 
   create_table "restaurants", force: true do |t|
+    t.string   "name"
+    t.string   "cuisinetype"
+    t.string   "location"
+    t.string   "logourl"
+    t.string   "deliverytime"
+    t.string   "deliverycost"
+    t.string   "minimumorder"
+    t.string   "paymenttype"
+    t.string   "reviewcount"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
