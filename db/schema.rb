@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150126074634) do
     t.string   "minimumorder"
     t.string   "paymenttype"
     t.string   "reviewcount"
+    t.string   "menuurl"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

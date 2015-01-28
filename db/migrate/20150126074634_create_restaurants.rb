@@ -10,6 +10,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :minimumorder
       t.string :paymenttype
       t.string :reviewcount
+      t.string :menuurl
       t.timestamps
     end
   end
