@@ -1,0 +1,70 @@
+/*// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+.bold-text{
+  font-weight: bold;
+}
+
+.restaurant-white-box{
+  background-color: white;
+  height: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-box{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(212, 212, 217, 1);
+  margin-bottom: 30px;
+}
+
+.logo-img{
+  /* Add the style for the image */
+}
+
+.restaurant-header{
+  background-color: rgba(212, 212, 217, 1);
+  height: 25%;
+  /*width: 100%;*/
+}
+
+.restaurant-main{
+  background-color: rgba(237, 238, 243, 1);
+  height: 75%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.restaurant-info p {
+  /*style for the restaurant info*/
+}
+.restaurant-info-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.restaurant-cuisine-type {
+  /*style for the cuisine type*/
+}
+
+/*.restaurant-button{
+  margin-top: 80px;
+}
+*/
+.restaurant-name{
+  font-size: 20px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.restaurant-location{
+  font-size: 10px;
+  margin-left: 30px;
+}
+
+.review-count{
+  float: left;
+}
