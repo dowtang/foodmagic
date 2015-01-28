@@ -6,11 +6,12 @@
   font-weight: bold;
 }
 
-.restaurant-white-box{
+.col-xs-8.restaurant-white-box{
   background-color: white;
-  height: 500px;
+  /*height: 500px;*/
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 10px 40px;
 }
 
 .restaurant-box{
@@ -18,7 +19,8 @@
   border-width: 1px;
   border-radius: 5px;
   border-color: rgba(212, 212, 217, 1);
-  margin-bottom: 30px;
+  margin: 10px 0px 10px 0px;
+  padding: 0;
 }
 
 .logo-img{
@@ -56,15 +58,19 @@
 */
 .restaurant-name{
   font-size: 20px;
-  margin-left: 40px;
+  margin-left: 20px;
   font-weight: bold;
 }
 
 .restaurant-location{
   font-size: 10px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .review-count{
   float: left;
+}
+
+.button-go-to-menu{
+  margin-top: 40px;
 }
