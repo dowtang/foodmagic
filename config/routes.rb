@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
    resources :restaurants
 
-   resources :menus
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
