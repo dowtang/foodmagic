@@ -1,0 +1,107 @@
+<div class="row">
+
+  <!-- the grey menu -->
+  <div class="col-xs-8 menu">
+    <div class="menu-header">
+      <div class="row menu-restaurant-name">
+      <%= @restaurant.name %>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 menu-restaurant-address">
+        <%= @restaurant.location %>
+        </div>
+        <div class="col-xs-3">
+        <%= @restaurant.reviewcount %>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-body"> 
+      <div class="row">
+        <!-- <div class="col-xs-12"> -->
+          <div class="col-xs-3 restaurant-detail">
+          <%= image_tag(@restaurant.logourl) %>
+          </div>
+          <div class="col-xs-8"> 
+            <p>
+                <span class="restaurant-cuisine-type">
+            <%= @restaurant.cuisinetype %>
+            </span>
+            </p>
+            <p>
+                <span class="restaurant-info-title">Delivery in:
+            <%= @restaurant.deliverytime %>
+            </span>
+            </p>
+            <p>
+                <span class="restaurant-info-title">Delivery cost:
+            <%= @restaurant.deliverycost %>
+            </span>
+            </p>
+            <p>
+                <span class="restaurant-info-title">Delivery min:
+            <%= @restaurant.minimumorder %>
+            </span>
+            </p>
+            <p>
+                <span class="restaurant-info-title">Payment type:
+            <%= @restaurant.paymenttype %>
+            </span>
+            </p>
+          <!-- </div> -->
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-xs-8 menu-buttons">
+        <button type="button" class="btn btn-default" id="button-menu">Menu</button>
+        <button type="button" class="btn btn-default" id="button-reviews">Reviews</button>
+        <button type="button" class="btn btn-default" id="button-info">Info</button>
+      </div>
+    </div>  
+
+    <div class="row">
+      <div class="col-xs-3 menu-dishes">
+        <div>Sushi Set</div>
+        <div>Sashimi Set</div>
+        <div>Sushi Set</div>
+        <div>Sashimi Set</div>
+        <div>Sushi Set</div>
+        <div>Sashimi Set</div>
+        <div>Sushi Set</div>
+        <div>Sashimi Set</div>
+        <div>Sushi Set</div>
+        <div>Sashimi Set</div>
+      </div>
+
+      <div class="col-xs-8">
+        <div class="row">
+          Sushi Set
+        </div>
+        <div class="row">
+        Sushi Image
+        </div>
+        <div class="row">
+        Menu
+        </div>
+      </div>
+    </div>
+   </div> 
+  </div>
+
+  <div class="col-xs-3 col-xs-offset-1 your-order">
+
+    <div class="row your-order-head">
+      Your order
+    </div>
+    <div class="row your-order-body">
+      <div class="col-xs-9">
+      food
+      </div>
+      <div class="col-xs-3">
+      amount
+      </div>
+    </div>
+  </div>
+
+</div>
