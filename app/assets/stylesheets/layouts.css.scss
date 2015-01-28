@@ -2,17 +2,23 @@
 .body{
   height: 100%;
   font-family: arial, Georgia, serif ;
+  padding-top: 90px;
 }
 
 .header{
-  background-color: rgba(194, 242, 218, 0.6);
+  background-color: rgba(194, 242, 218, 1);
   margin: 0;
   padding: 0;
   border: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 90px;
 }
 
 .footer{
-  background-color: rgba(194, 242, 218, 0.6);
+  background-color: rgba(194, 242, 218, .6);
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,7 +31,7 @@
 }
 
 .main{
-  background-color: rgba(217, 255, 241, 0.4);
+  background-color: rgba(217, 255, 241, 0.6);
   height: 100%;
 }
 
