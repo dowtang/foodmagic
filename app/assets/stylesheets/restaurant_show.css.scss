@@ -1,0 +1,63 @@
+/*// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+.col-xs-8.menu{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(212, 212, 217, 1);
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.menu-header{
+  background-color: rgba(212, 212, 217, 1);
+  height: 25%;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-restaurant-name{
+  /*margsin-left: 30px;*/
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+.menu-restaurant-address{
+  font-size: 12px;
+  /*padding-left: 50px;*/
+  margin-left: 15px;
+}
+
+.menu-body{
+  background-color: white;
+}
+
+.restaurant-detail{
+  margin-left: 15px;
+}
+
+.menu-buttons{
+  margin-left: 15px;
+}
+
+.menu-dishes{
+  margin-left: 15px;
+}
+
+.your-order{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(212, 212, 217, 1);
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.your-order-head{
+  background-color: rgba(97, 96, 97, 1);
+}
+
+.your-order-body{
+  background-color: white;
+}
