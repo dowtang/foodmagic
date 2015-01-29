@@ -1,4 +1,4 @@
-class PaymentsController < ApplicationController
+ class PaymentsController < ApplicationController
 
   def new
 
@@ -14,4 +14,13 @@ class PaymentsController < ApplicationController
       redirect_to charges_path
     end
   end
+
+  def show
+    # @payment = Payment.find(params[:id])  
+  end
+
+  def payment_params
+    params.require(:payment).permit(:dishes, :price)
+  end
+
 end

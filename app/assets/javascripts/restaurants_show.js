@@ -3,11 +3,14 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function(){
 
+  
   $("#menu-button-menu").click(function(){
     
     $("#tab-reviews").hide();
     $("#tab-info").hide();
+    $("li").removeClass("active");
     $("#tab-menu").show();
+    $("li#menu-button-menu").addClass("active");
   });
 
 
@@ -15,14 +18,20 @@ $(document).ready(function(){
     
     $("#tab-menu").hide();
     $("#tab-info").hide();
+    $("li").removeClass("active");
     $("#tab-reviews").show();
+    $("li#menu-button-reviews").addClass("active");
+    
   });
 
   $("#menu-button-info").click(function(){
     
     $("#tab-menu").hide();
     $("#tab-reviews").hide();
+    $("li").removeClass("active");
     $("#tab-info").show();
+    $("li#menu-button-info").addClass("active");
+    
   });
 
 
