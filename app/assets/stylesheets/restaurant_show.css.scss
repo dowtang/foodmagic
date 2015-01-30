@@ -1,6 +1,9 @@
 /*// Place all the styles related to the menus controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+.menu-text{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 .col-xs-8.menu{
   border-style: solid;
   border-width: 1px;
@@ -34,16 +37,55 @@
 }
 
 .restaurant-detail{
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
-.menu-buttons{
-  margin-left: 15px;
+#menu-button ul li a{
+  color: rgb(102, 102, 102);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#menu-button ul li.active a{
+  color: rgba(0, 0, 0, 1);
 }
 
 .menu-dishes{
   margin-left: 15px;
 }
+
+.dish-title1{
+  font-size: 23px;
+  font-weight: bold;
+  color:rgba(0, 0, 0, 1);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.row.dish-description{
+  font-size: 13px;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 9px; 
+}
+
+.dish-image{
+  margin-bottom: 10px;
+}
+
+.dish-title2{
+  font-size: 13px;
+  color:rgba(51,51,51,1);
+  padding-top: 10px;
+}
+
+/*.variation{
+  border-bottom-color: rgba(229, 229, 229, 1);
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 10px; 
+}*/
 
 .your-order{
   border-style: solid;
