@@ -24,27 +24,40 @@
         # data_format_food_heading = "div > div > section > div > div"
 
         # THIS IS MY CSS FORMAT FOR EACH MENU ITEM
+        # data_format_menu_item = ".menu-list"
         data_format_menu_item = ".menu-item-container"
 
         # HERE I'M GRABING ALL THE SINGLE MENU ITEMS AND STORE THEM INTO AN ARRAY menu_items
         menu_items = html_doc.css(data_format_menu_item)
 
-        # 
         menu_items.each_with_index do | menu_item, index |
           
 
-          if index < 5
+        # IF THE PAGE HAS THE LAYOUT A
+        # PUTS "LETS SCRAPE THIS RESTAURANT NAME WITH METHOD A"
+
+
+        # ELSE IF THE PAGE HAS THE LAYOUT B
+        # PUTS "LETS SCRAPE THIS RESTAURANT NAME WITH METHOD B"
+
+
+          if index < 15
           puts index
 
+          # category_title_format = ".category-title"
           dish_title_format = ".title"
           dish_size_format = "article.variation > div.title"
           dish_price_format = "article.variation > div.price"
           
 
           dish_title = menu_item.css(dish_title_format).text
+          dish_title = menu_item.css(dish_title_format).text
           dish_size = menu_item.css(dish_size_format).text
           dish_price = menu_item.css(dish_price_format).text
+          
+          # dish_title.each_with_index do | menu_item, index |
 
+          # puts "Category Title: #{category_title}"
           puts "Dish Title: #{dish_title}"
           puts "Dish Size: #{dish_size}"
           puts "Dish Price: #{dish_price}"
