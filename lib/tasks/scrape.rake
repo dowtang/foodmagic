@@ -10,14 +10,6 @@ namespace :scrape_foodpanda do
 
       url = "https://www.foodpanda.hk/restaurants?lat=22.2799907&lng=114.1587983&district=Central"
 
-      # url = [
-      #   "https://www.foodpanda.hk/restaurants?lat=22.2799907&lng=114.1587983&district=Central",
-        
-      #   "https://www.foodpanda.hk/restaurants?lat=22.2988123&lng=114.1721746&district=Tsim+Sha+Tsui",
-        
-      #   "https://www.foodpanda.hk/restaurants?lat=22.2859787&lng=114.1914919&district=Causeway+Bay"]
-
-
       document = open(url).read
 
       html_doc = Nokogiri::HTML(document)
@@ -27,35 +19,18 @@ namespace :scrape_foodpanda do
       data_format_cuisine_type = "div.details > div.description > ul.cuisines > li:nth-child(1) > a:nth-child(1)"
       data_format_location = "section > article > div > div > address"
       data_format_logo_url = "section > article > div > div > img"
-
       data_format_review_count = "article.vendor.js-vendors-list-vendor-panel > div.header > div.extra > div.rating > .review"
-      # data_format_vendor_info = "article.vendor.js-vendors-list-vendor-panel > div.details > div.description > dl:nth-of-type(n).vendor-quick-info > dd:nth-of-type(n)"
-      # data_format_vendor_info = ".vendor-quick-info:nth-child(2)"
       data_format_vendor_info = "dl.vendor-quick-info:nth-of-type(1)"
       data_format_menu_url = "section.vendor-list > section.vendors.js-infscroll-container > article.vendor.js-vendors-list-vendor-panel > div.details > a:nth-child(3).btn.btn-primary.btn-lg.btn-arrow.js-vendors-list-vendor-panel-link"
-
-
-      # data_format_delivery_time = "article.vendor.js-vendors-list-vendor-panel > div.details > div.description > dl:nth-child(2).vendor-quick-info > dd:nth-child(2)"
-
-      # data_format_minimum_order = "article.vendor.js-vendors-list-vendor-panel > div.details > div.description > dl.vendor-quick-info > dd:nth-child(5)"
-
-      # data_format_delivery_cost = "article > div > div > dl > dt.vendor-delivery-fee"
-
-      # data_format_payment_type = "div.description > dl.vendor-quick-info > dt:nth-child(6).vendor-online-payment > ul:nth-child(1).csv-list > li:nth-child(1)"
-      
 
       names = html_doc.css(data_format_name)
       cuisinetypes = html_doc.css(data_format_cuisine_type)
       locations = html_doc.css(data_format_location)
       logourls = html_doc.css(data_format_logo_url)
-      # deliverytimes = html_doc.css(data_format_delivery_time)
-      # deliverycosts = html_doc.css(data_format_delivery_cost)
-      # minimumorders = html_doc.css(data_format_minimum_order)
-      # paymenttypes = html_doc.css(data_format_payment_type)
       reviewcounts = html_doc.css(data_format_review_count)
       vendorinfos = html_doc.css(data_format_vendor_info)
       menuurls = html_doc.css(data_format_menu_url)
-
+      
       names.each_with_index do |name, index|
 
         puts "-------------------"
@@ -72,7 +47,6 @@ namespace :scrape_foodpanda do
         # puts "vendor info >>> #{vendorinfos[index]}"
 
 
-
         delivery_time_format = ".vendor-delivery-time + dd"
         delivery_time = vendorinfos[index].css(delivery_time_format).text.squish
         # puts "delivery_time >>> #{delivery_time}"
@@ -86,13 +60,6 @@ namespace :scrape_foodpanda do
           delivery_fee = "Free delivery"
         end
         # puts "delivery_fee >>> #{delivery_fee}"
-
-
-
-
-
-
-
 
         delivery_minimum_format = ".vendor-delivery-minimum + dd"
         delivery_minimum = vendorinfos[index].css(delivery_minimum_format).text.squish
@@ -112,7 +79,7 @@ namespace :scrape_foodpanda do
           :cuisinetype => cuisinetypes[index].text, 
           :location => locations[index].text, 
           :logourl => "http:#{logourls[index].attr("data-src")}",
-          :menuurl => "http:/#{menuurls[index].attr("href")}",
+          :menuurl => "https://www.foodpanda.hk#{menuurls[index].attr("href")}",
           :deliverytime => delivery_time, 
           :deliverycost => delivery_fee, 
           :minimumorder => delivery_minimum, 
