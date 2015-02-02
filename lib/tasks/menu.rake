@@ -1,15 +1,15 @@
-# namespace :scrape_foodpanda_menu do
+namespace :scrape_foodpanda_menu do
 #   # this is a description of your task
   
 #   desc "Scrape the list of"
-#   task :scrape_menus => :environment do
+  task :scrape_menus => :environment do
 #     # do something
 
-#       require 'open-uri'
-#       require 'nokogiri'
+      require 'open-uri'
+      require 'nokogiri'
 
 
-#       url = "https://www.foodpanda.hk/restaurants?lat=22.2799907&lng=114.1587983&district=Central"
+      url = "https://www.foodpanda.hk/restaurants?lat=22.2799907&lng=114.1587983&district=Central"
 
       # WE WANT TO RUN THE SCRAPING FOR ALL THE RESTAURANTS IN OUR DATABASE, LET'S LOOP THROUGH ALL OF THEM
       Restaurant.all.each do |restaurant|

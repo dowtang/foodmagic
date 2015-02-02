@@ -22,6 +22,8 @@ namespace :harry_scrape_foodpanda_menu do
           dish_title = menu_item.css(dish_title_format).text
           puts "Dish Title: #{dish_title}"
 
+          dish = restaurant.dishes.create(:name => dish_title)
+
           dish_variation_format = "article.variation"
           dish_variations = menu_item.css(dish_variation_format)
           # puts "Variations: #{dish_variations}"
@@ -29,8 +31,15 @@ namespace :harry_scrape_foodpanda_menu do
           if dish_variations.length == 1
             puts "no variation"
             dish_price_format = ".price"
-            dish_price = dish_variations[0].css(dish_price_format)
-            puts dish_price
+            dish_price = dish_variations[0].css(dish_price_format).text.squish
+            puts "Dish Price: #{dish_price}"
+
+            dish.variations.create(
+              :size => dish_title,
+              :price => dish_price
+              # :category => 
+            )
+
           else
             puts "yes variation"
             
@@ -43,11 +52,23 @@ namespace :harry_scrape_foodpanda_menu do
               #   </div>
               # </div>"
 
+              y = ".title"
+              dish_title = x.css(dish_title_format).text.squish
+              puts "Dish Title: #{dish_title}"
+              
               y = ".price"
-
-              dish_price = x.css(y).text
+              dish_price = x.css(y).text.squish
+              puts "Dish Price: #{dish_price}"
               # dish_price = 1
+
+              dish.variations.create(
+                :size => dish_title,
+                :price => dish_price
+                # :category => 
+              )
             end
+
+
           end
         end
       
