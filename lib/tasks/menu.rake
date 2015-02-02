@@ -18,11 +18,11 @@ namespace :harry_scrape_foodpanda_menu do
         if index < 15
           puts index
 
-          dish_title_format = ".title"
+          dish_title_format = ".menu-item > .title"
           dish_title = menu_item.css(dish_title_format).text
           puts "Dish Title: #{dish_title}"
 
-          dish = restaurant.dishes.create(:name => dish_title)
+          new_dish = restaurant.dishes.create(:name => dish_title)
 
           dish_variation_format = "article.variation"
           dish_variations = menu_item.css(dish_variation_format)
@@ -33,27 +33,27 @@ namespace :harry_scrape_foodpanda_menu do
             dish_price = dish_variations[0].css(dish_price_format).text.squish
             puts "Dish Price: #{dish_price}"
 
-            dish.variations.create(
-              :size => dish_title,
+            new_dish.variations.create(
+              # :size => dish_title,
               :price => dish_price
             )
 
           else
             puts "yes variation"
                         
-            dish_variations.each do |x|
+            dish_variations.each do |variation|
             
-              y = ".title"
-              dish_title = x.css(dish_title_format).text.squish
-              puts "Dish Title: #{dish_title}"
+              variation_title_format = ".title"
+              variation_title = variation.css(variation_title_format).text.squish
+              puts "Variation Title: #{variation_title}"
 
-              y = ".price"
-              dish_price = x.css(y).text.squish
-              puts "Dish Price: #{dish_price}"
+              variation_price_format = ".price"
+              variation_price = variation.css(variation_price_format).text.squish
+              puts "Variation Price: #{variation_price}"
 
-              dish.variations.create(
-                :size => dish_title,
-                :price => dish_price
+              new_dish.variations.create(
+                :size => variation_title,
+                :price => variation_price
               )
             end
           end
