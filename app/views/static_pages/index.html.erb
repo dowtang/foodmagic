@@ -1,71 +1,87 @@
+<!-- CLOSING DIV TO MOVE OUT FROM THE CONTAINER (THAT WAS OPENED IN APPLICATION.HTML)... -->
+</div>
 
-<!-- <img src="Hong Kong 01 06 Central District From Victoria Peak Nighttime.jpg" alt="Central" class="fp-image"> -->
+<div class="below-header-row">
+  <span id="button-style">Choose By:
+  </span>
+  <button type="button" class="btn btn-default btn-filter" id="button-locations">Locations</button>
+  <button type="button" class="btn btn-default btn-filter" id="button-cuisines">Cuisines</button>
+  <button type="button" class="btn btn-default btn-filter" id="button-reviews">Reviews
+  </button>
+</div>
+<!-- ... AND OPENING AGAIN THE CONTAINER -->
+<div class="container">
 
+  <div id="tab-locations">
 
-<div id="tab-locations">
+    
+    <div class="row">  
 
-  
-  <div class="row">  
-    <div class="col-xs-4 filter-box">
-      <%= image_tag "locations-central-cut.jpg" %>
+      <div class="col-xs-4 filter-box">
+        <div class="row">
+          <%= image_tag "locations-central-cut.jpg" %>
+        </div>
+        <div class="row">
+          <%= link_to "Central", restaurants_path, :class => "btn btn-default btn-filter"%>
+
+        </div>
+      </div>
+
+      <div class="col-xs-4 filter-box">
+        <div class="row">
+          <%= image_tag "locations-tst-cut.jpg" %>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-default btn-filter" id="button-locations">TST</button>
+        </div>
+      </div>
+
+      <div class="col-xs-4 filter-box">
+        <div class="row">
+          <%= image_tag "locations-cwb-cut.jpg" %>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-default btn-filter" id="button-locations">Causeway Bay</button>
+        </div>
+      </div>
     </div>
-    <!-- <div class="grey-box">Central</div> -->
-    <div class="col-xs-4 filter-box">
-      <%= image_tag "locations-tst-cut.jpg" %>
-    </div>
-    <div class="col-xs-4 filter-box">
-      <%= image_tag "locations-cwb-cut.jpg" %>
-    </div>
+    
+    
+
+
   </div>
-  
 
-  
-  <div class="row">
-    <div class="col-xs-4 locations-text">
-    Central
-    </div>
-    <div class="col-xs-4 locations-text">
-    Tsim Sha Tsui
-    </div>
-    <div class="col-xs-4 locations-text">
-    Causeway Bay
-    </div>
-  </div>  
-
-
-</div>
-
-<div id="tab-cuisines" style="display:none;">
-  
-  <div class="row">
-    <div class="col-xs-4 filter-box">
-    <%= image_tag "cuisines/cuisines-chinese-cut.jpg"%>
-    </div>
-    <div class="col-xs-4 filter-box">
-    <%= image_tag "cuisines/cuisines-japanese-cut.jpg"%>
-    </div>
-    <div class="col-xs-4 filter-box">
-    <%= image_tag "cuisines/cuisines-westen-cut.jpg"%>
-    </div>
-  </div>  
+  <div id="tab-cuisines" style="display:none;">
+    
+    <div class="row">
+      <div class="col-xs-4 filter-box">
+      <%= image_tag "cuisines/cuisines-chinese-cut.jpg"%>
+      </div>
+      <div class="col-xs-4 filter-box">
+      <%= image_tag "cuisines/cuisines-japanese-cut.jpg"%>
+      </div>
+      <div class="col-xs-4 filter-box">
+      <%= image_tag "cuisines/cuisines-westen-cut.jpg"%>
+      </div>
+    </div>  
 
 
-  
-  <div class="row">
-    <div class="col-xs-4 cuisines-text">
-    Chinese
-    </div>
-    <div class="col-xs-4 cuisines-text">
-    Japanese
-    </div>
-    <div class="col-xs-4 cuisines-text">
-    Westen
-    </div>
-  </div>  
-  
+    
+    <div class="row">
+      <div class="col-xs-4 cuisines-text">
+      Chinese
+      </div>
+      <div class="col-xs-4 cuisines-text">
+      Japanese
+      </div>
+      <div class="col-xs-4 cuisines-text">
+      Westen
+      </div>
+    </div>  
+    
 
-</div>
+  </div>
 
-<div id="tab-reviews" style="display:none;">
-  this will be the reviews tab.
-</div>
+  <div id="tab-reviews" style="display:none;">
+    this will be the reviews tab.
+  </div>
