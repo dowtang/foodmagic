@@ -26,11 +26,11 @@
             <!-- Restaurant Main -->
           <div class="row restaurant-main">
 
-            <div class="col-xs-3 logo-img">
+            <div class="col-lg-3 logo-img">
               <%= image_tag(restaurant.logourl) %>
             </div>
 
-            <div class="col-xs-6 restaurant-info">
+            <div class="col-lg-6 restaurant-info">
               <p>
                 <span class="restaurant-cuisine-type"><%= restaurant.cuisinetype %></span>
               </p>
@@ -52,7 +52,7 @@
               </p>
             </div>
       
-            <div class="col-xs-3">
+            <div class="col-lg-3">
               
                 <%= link_to restaurant_path(restaurant), :class => "btn btn-lg btn-success go-to-menu" do %>
                   Go to Menu
