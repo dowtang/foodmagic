@@ -17,46 +17,92 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-3">
-        <div>
-          1
-        </div>
-        <div>
-          <button type="button" class="btn btn-default btn-xs">
-          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-xs">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
+      <table class="table table-hover">
 
-      <div class="col-xs-6">
-        <div class="important-text">
-        S1 Set A (8pcs)
-        </div>
-        <div>
-        Salmon Sushi (2pcs) Eel Sushi (1pc)
-        </div>
-      </div>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </td>
+          <td class="important-text">
+          S1 Set A (8pcs)
+          </td>
+          <td>
+          Salmon Sushi (2pcs) Eel Sushi (1pc)
+          </td>
+          <td class="important-text">
+          HK$65.00
+          </td>
+        </tr>
 
-      <div class="col-xs-3 important-text">
-      HK$65.00
-      </div>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </td>
+          <td class="important-text">
+          S1 Set A (8pcs)
+          </td>
+          <td>
+          Salmon Sushi (2pcs) Eel Sushi (1pc)
+          </td>
+          <td class="important-text">
+          HK$65.00
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </td>
+          <td class="important-text">
+          S1 Set A (8pcs)
+          </td>
+          <td>
+          Salmon Sushi (2pcs) Eel Sushi (1pc)
+          </td>
+          <td class="important-text">
+          HK$65.00
+          </td>
+        </tr>
+        
+      </table>
     </div>
 
   </div>
 
 </div>
 
-
-
-<%= form_tag payments_path do %>
-  <article>
-    <label class="amount">
-      <span>Amount: $65.00</span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500"></script>
-<% end %>
+  <%#= form_tag payments_path do %>
+<div class="payment-box">    
+  <div>
+  Amount: $65.00
+  </div>
+  <div class="payment-btn">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500">s
+    </script>
+  </div>
+  <%# end %>
+</div>
