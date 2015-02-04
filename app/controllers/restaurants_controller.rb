@@ -9,18 +9,6 @@ class RestaurantsController < ApplicationController
 
     @dishes = @restaurant.dishes
 
-
-
-
-
-
-
-    # @dish = find_by id: 
-
-    # @size = find by 
-
-    # @price =
-
   end
 
 end

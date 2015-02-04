@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'static_pages#index'
-   # get 'restaurants' => 'static_pages#restaurants'
-   
 
    resources :restaurants
 
