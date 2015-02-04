@@ -86,11 +86,7 @@
             </div>
           </div>
 
-
           <div class="menu-category-content">
-            
-            
-
             <div class="row dish-title2">
             Beef with Burritos or Burrito Bowls
             </div>
@@ -101,57 +97,53 @@
             
             <table class="table table-hover">
 
-              <tr>
-                <td class="col-xs-8">
-                  Dishes individuals 1
-                </td>
+              <% @dishes.each do|dish| %>
+
+                <% if dish.variations.count == 1 %>
                   
-                <td class="col-xs-2">
-                $Price
-                </td>
+                  <tr>
+                    <td class="col-xs-8">
+                      <%= dish.name %>
+                    </td>
+                    <td>
+                      <%= dish.variations.first.price %>
+                    </td>
+                    <td class="col-xs-2">
+                      <button type="button" class="btn btn-success btn-xs">Add
+                      </button>
+                    </td>
+                  </tr>
 
-                <td class="col-xs-2">
-                CheckBox
-                </td>
-              </tr>
-
-              <tr>
-                <td class="col-xs-8">
-                  Dishes individuals 2
-                </td>
+                <% else %>    
+                    
+                    <tr>
+                      <td colspan="3">
+                        <%= dish.name %>
+                      </td>
+                    </tr>
                   
-                <td class="col-xs-2">
-                $Price
-                </td>
+                  <% dish.variations.each do |variation| %>
 
-                <td class="col-xs-2">
-                CheckBox
-                </td>
-              </tr>
-
-      
-              <tr>
-                <td class="col-xs-8">
-                  Dishes individuals 3
-                </td>
+                    <tr>
+                      <td class="col-xs-8">
+                        <%= variation.size %>
+                      </td>
+                      <td>
+                        <%= variation.price %>
+                      </td>
+                      <td class="col-xs-2">
+                        <button type="button" class="btn btn-success btn-xs">Add
+                        </button>
+                      </td>
+                    </tr>
                   
-                <td class="col-xs-2">
-                $Price
-                </td>
+                  <% end %>
 
-                <td class="col-xs-2">
-                CheckBox
-                </td>
-              </tr>
-
+                <% end %>    
+              <% end %>
             </table>
-            
-          </div>
+    
 
-
-        </div>
-      </div>
-    </div>
 
     <div id="tab-reviews" style="display:none;">
     This is the reviews page.
@@ -161,11 +153,14 @@
     This is the info page.
     </div>
 
-   </div> 
+  </div> 
   </div>
 
-  <div class="col-xs-3 col-xs-offset-1 your-order">
+</div>
+</div>
+</div>
 
+  <div class="col-xs-3 col-xs-offset-1 your-order">
     <div class="row your-order-head">
       Your order
     </div>
@@ -177,8 +172,7 @@
       amount
       </div>
     </div>
-    
-    <%= link_to "Process to Checkout", new_payment_path, :class => "btn btn-lg btn-success" %>
+      <%= link_to "Process to Checkout", new_payment_path, :class => "btn btn-lg btn-success" %>
   </div>
 
 </div>

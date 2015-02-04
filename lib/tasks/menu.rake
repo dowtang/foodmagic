@@ -15,7 +15,7 @@ namespace :harry_scrape_foodpanda_menu do
 
       menu_items.each_with_index do |menu_item, index|
 
-        if index < 15
+        # if index < 15
           puts index
 
           dish_title_format = ".menu-item > .title"
@@ -57,7 +57,7 @@ namespace :harry_scrape_foodpanda_menu do
               )
             end
           end
-        end
+        # end
       end
 
       puts "I'm done with #{restaurant.name}"

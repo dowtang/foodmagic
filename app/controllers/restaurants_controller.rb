@@ -6,6 +6,21 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+
+    @dishes = @restaurant.dishes
+
+
+
+
+
+
+
+    # @dish = find_by id: 
+
+    # @size = find by 
+
+    # @price =
+
   end
 
 end
