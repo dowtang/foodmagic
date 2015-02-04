@@ -1,9 +1,60 @@
 <!-- this is our checkout page -->
+<h1>Review Your Order</h1>
+
+<div class="row review-order-text">
+
+  <div class="col-xs-10 col-xs-offset-1 review-order-box">
+  
+    <div class="row review-order-dark-grey">
+      
+      <div class="col-xs-9 important-text">
+      Your order
+      </div>
+      <div class="col-xs-3 hiden-text">
+      Change order
+      </div>
+    
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3">
+        <div>
+          1
+        </div>
+        <div>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="important-text">
+        S1 Set A (8pcs)
+        </div>
+        <div>
+        Salmon Sushi (2pcs) Eel Sushi (1pc)
+        </div>
+      </div>
+
+      <div class="col-xs-3 important-text">
+      HK$65.00
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
 
 <%= form_tag payments_path do %>
   <article>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>Amount: $65.00</span>
     </label>
   </article>
 

@@ -1,3 +1,28 @@
-// Place all the styles related to the payments controller here.
+//*/ Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+.review-order-text{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.review-order-box{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(212, 212, 217, 1);
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.review-order-dark-grey{
+  background-color: rgba(212, 212, 217, 1);
+  /*background-color: red;*/
+}
+
+.important-text{
+  font-weight: bold;
+}
+
+.hiden-text{
+  color: rgba(106, 111, 104, 1);
+}
