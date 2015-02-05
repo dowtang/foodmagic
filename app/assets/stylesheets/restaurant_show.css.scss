@@ -18,6 +18,9 @@
   height: 25%;
   padding: 0;
   margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
 }
 
 .menu-restaurant-name{
@@ -30,6 +33,10 @@
   font-size: 12px;
   /*padding-left: 50px;*/
   margin-left: 15px;
+}
+
+.menu{
+  margin-top: 10px;
 }
 
 .menu-body{
@@ -87,10 +94,19 @@
   padding-top: 10px; 
 }*/
 
+#your-order-checkout{
+  text-align: left;
+}
+
+.checkout-button{
+  text-align: center;
+  padding: 10px;
+}
+
 .your-order{
   border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
+  border-spacing: 5px;
+  border-radius: 20px;
   border-color: rgba(212, 212, 217, 1);
   margin: 10px 0px 10px 0px;
   padding: 0;
@@ -98,6 +114,8 @@
 
 .your-order-head{
   background-color: rgba(212, 212, 217, 1);
+  text-align: left;
+  font-size: 16px;
 }
 
 .your-order-body{
