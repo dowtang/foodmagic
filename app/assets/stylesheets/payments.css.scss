@@ -27,6 +27,10 @@
   color: rgba(106, 111, 104, 1);
 }
 
+.table-white{
+  background-color: white;
+}
+
 .payment-btn{
   margin-right: 50px;
 }
@@ -34,4 +38,23 @@
 .payment-box{
   float: right;
   margin-bottom: 20px;
+}
+
+.info-box{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(212, 212, 217, 1);
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.info-box-grey{
+  background-color: rgba(212, 212, 217, 1);
+  padding-left: 5px;
+}
+
+.info-box-white{
+  background-color: white;
+  padding: 5px 5px 5px 5px;
 }
