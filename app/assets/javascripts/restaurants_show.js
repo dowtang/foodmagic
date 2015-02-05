@@ -6,8 +6,8 @@ $(document).ready(function(){
   $(".append-to").on('click',function () {
     // var dow = $(this).attr("data-price");
     
-    var name = $(this).data("name");
-    var size = $(this).data("size");
+    var name = $(this).data("name-size");
+    // var size = $(this).data("size");
     var price = $(this).data("price");
      
     // console.log(dow);

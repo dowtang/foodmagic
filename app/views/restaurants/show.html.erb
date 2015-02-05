@@ -116,7 +116,7 @@
                         <%= dish.variations.first.price %>
                       </td>
                       <td class="col-xs-2">
-                        <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{dish.variations.first.price}", "data-name" => "#{dish.name}" %>
+                        <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{dish.variations.first.price}", "data-name-size" => "#{dish.name}", "data-id" => "#{dish.variations.first.id}" %>
                       </td>
                     </tr>
                   <% else %>
@@ -134,7 +134,7 @@
                           <%= variation.price %>
                         </td>
                         <td class="col-xs-2">
-                          <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{variation.price}", "data-name" => "#{variation.size}", "data-name" => "#{dish.name}" %>
+                          <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{variation.price}", "data-name-size" => "#{dish.name} - #{variation.size}", "data-id" => "#{variation.id}" %>
                         </td>
                       </tr>
                     <% end %>
