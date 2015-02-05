@@ -17,7 +17,7 @@
     </div>
 
     <div class="row">
-      <table class="table table-hover">
+      <table class="table table-white table-hover">
 
         <tr>
           <td>
@@ -96,13 +96,73 @@
 </div>
 
   <%#= form_tag payments_path do %>
-<div class="payment-box">    
-  <div>
-  Amount: $65.00
+
+
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    
+    <div class="info-box">
+      <div class="info-box-grey important-text">
+        Your contact details
+      </div>
+      <div class="info-box-white">
+        <p>
+          Please fill in the form.
+        </p>
+
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputFirstName" class="col-sm-2 control-label">First name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputLastName" class="col-sm-2 control-label">Last name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputAddress" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+            </div>
+          </div>
+
+          <div class="form-group">  
+            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          
+          <div class="form-group">  
+            <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputMobile" placeholder="Mobile">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="payment-btn">
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500">s
-    </script>
-  </div>
-  <%# end %>
 </div>
+
+
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="payment-box">    
+      <div class="col-xs-12">
+      Amount: $65.00
+      </div>
+      <div class="col-xs-12 payment-btn">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500">s
+        </script>
+      </div>
+      <%# end %>
+    </div>
+  </div>
+</div>    
