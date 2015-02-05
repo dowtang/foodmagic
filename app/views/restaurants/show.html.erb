@@ -1,15 +1,14 @@
 <div class="row menu-text">
-  
   <div class="col-lg-8 col-md-8 col-sm-12 menu">
     <div class="menu-header">
       <div class="row menu-restaurant-name">
         <%= @restaurant.name %>
       </div>
       <div class="row">
-        <div class="col-xs-8 menu-restaurant-address">
+        <div class="col-lg-8 menu-restaurant-address">
           <%= @restaurant.location %>
         </div>
-        <div class="col-xs-3">
+        <div class="col-lg-3">
           <%= @restaurant.reviewcount %>
         </div>
       </div>
@@ -17,7 +16,7 @@
   
     <div class="menu-body"> 
       <div class="row">
-        <div class="col-xs-3 restaurant-detail">
+        <div class="col-xs-4 restaurant-detail">
           <%= image_tag(@restaurant.logourl) %>
         </div>
         <div class="col-xs-8"> 
@@ -117,15 +116,10 @@
                         <%= dish.variations.first.price %>
                       </td>
                       <td class="col-xs-2">
-                        
-     <!--                    <button type="button" class="btn btn-success btn-xs append-to" data-price="#{dish.variations.first.price}">Add
-                        </button> -->
-
                         <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{dish.variations.first.price}", "data-name" => "#{dish.name}" %>
-
                       </td>
                     </tr>
-                  <% else %>                          
+                  <% else %>
                     <tr>
                       <td colspan="3">
                         <%= dish.name %>
@@ -140,11 +134,7 @@
                           <%= variation.price %>
                         </td>
                         <td class="col-xs-2">
-<!--                           <button type="button" class="btn btn-success btn-xs append-to" data-price="#{variation.price}">Add
-                          </button> -->
-
                           <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{variation.price}", "data-name" => "#{variation.size}", "data-name" => "#{dish.name}" %>
-
                         </td>
                       </tr>
                     <% end %>
@@ -165,31 +155,24 @@
       </div>
     </div>
   </div>
-  
-  <table id="order-table" class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12 your-order">
-    <thead>
-      <tr class="your-order-head">
-        <th colspan="2">
-          Your Order 
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- <tr class="your-order-body">
-        <td class="col-xs-9">
-          food
-        </td>
-        <td class="col-xs-3">
-          amount
-        </td>
-      </tr> -->
-      <tr>
-        <td colspan="2" class="checkout-button">
-          <%= link_to "Process to Checkout", new_payment_path, "data-form" => "12", :class => "btn btn-lg btn-success" %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
-
+  <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12">
+    <table id="order-table" class="table your-order">
+      <thead>
+        <tr class="your-order-head">
+          <th colspan="2">
+            Your Order 
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2" class="checkout-button">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <%= link_to "Process to Checkout", new_payment_path, "data-form" => "12", :class => "btn btn-lg btn-success" %>
+    </div>
+  </div>
 </div>
