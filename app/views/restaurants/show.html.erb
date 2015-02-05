@@ -109,7 +109,7 @@
                   <% if dish.variations.count == 1 %>
                     
                     <tr class="append-dish">
-                      <td class="col-xs-8">
+                      <td class="col-xs-8 dish-name-menu">
                         <%= dish.name %>
                       </td>
                       <td>
@@ -121,7 +121,7 @@
                     </tr>
                   <% else %>
                     <tr>
-                      <td colspan="3">
+                      <td colspan="3" class="dish-name-menu">
                         <%= dish.name %>
                       </td>
                     </tr>
@@ -172,7 +172,7 @@
       </tbody>
     </table>
     <div>
-      <%= link_to "Process to Checkout", new_payment_path, "data-form" => "12", :class => "btn btn-lg btn-success" %>
+      <%= link_to "Process to Checkout", new_payment_path, "data-form" => "", :class => "btn btn-lg btn-success" %>
     </div>
   </div>
 </div>
