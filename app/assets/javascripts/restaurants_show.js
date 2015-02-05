@@ -3,6 +3,18 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function(){
 
+  $(".append-to").on('click',function () {
+    // var dow = $(this).attr("data-price");
+    
+    var name = $(this).data("name-size");
+    // var size = $(this).data("size");
+    var price = $(this).data("price");
+     
+    // console.log(dow);
+    // $('.row.your-order-head').append(dow);
+    $('#order-table > tbody').append('<tr class="your-order-body"><td class="col-xs-9">'+ name +'</td><td class="col-xs-3">'+ price +'</td></tr>');
+  
+  });
   
   $("#menu-button-menu").click(function(){
     

@@ -1,5 +1,5 @@
 <div class="row menu-text">
-  <div class="col-md-8 col-xs-12 menu">
+  <div class="col-lg-8 col-md-8 col-sm-12 menu">
     <div class="menu-header">
       <div class="row menu-restaurant-name">
         <%= @restaurant.name %>
@@ -108,35 +108,33 @@
 
                   <% if dish.variations.count == 1 %>
                     
-                    <tr>
-                      <td class="col-xs-8">
+                    <tr class="append-dish">
+                      <td class="col-xs-8 dish-name-menu">
                         <%= dish.name %>
                       </td>
                       <td>
                         <%= dish.variations.first.price %>
                       </td>
                       <td class="col-xs-2">
-                        <button type="button" class="btn btn-success btn-xs">Add
-                        </button>
+                        <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{dish.variations.first.price}", "data-name-size" => "#{dish.name}", "data-id" => "#{dish.variations.first.id}" %>
                       </td>
                     </tr>
-                  <% else %>                          
+                  <% else %>
                     <tr>
-                      <td colspan="3">
+                      <td colspan="3" class="dish-name-menu">
                         <%= dish.name %>
                       </td>
                     </tr>
                     <% dish.variations.each do |variation| %>
-                      <tr>
-                        <td class="col-xs-8">
+                      <tr class="append-dish">
+                        <td class="col-xs-8 size-indent">
                           <%= variation.size %>
                         </td>
                         <td>
                           <%= variation.price %>
                         </td>
                         <td class="col-xs-2">
-                          <button type="button" class="btn btn-success btn-xs">Add
-                          </button>
+                          <%= link_to "Add", "javascript:void(0)", :class => "btn btn-success btn-xs append-to", "data-price" => "#{variation.price}", "data-name-size" => "#{dish.name} - #{variation.size}", "data-id" => "#{variation.id}" %>
                         </td>
                       </tr>
                     <% end %>
@@ -157,114 +155,24 @@
       </div>
     </div>
   </div>
-  
-  <div class="row">
-    <div class="col-md-4 col-xs-12 your-order">
-      <div class="row your-order-head">
-        Your order
-      </div>
-      <div class="your-order-body">  
-        <div class="row">
-          <div class="col-xs-3">
-            <div>
-              1
-            </div>
-            <div>
-              <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-              </button>
-              <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              </button>
-            </div>
-          </div>
-        </div>  
-        <div>
-          <div class="col-xs-6">
-            <div class="important-text">
-            S1 Set A (8pcs)
-            </div>
-            <div>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-            </div>
-          </div>
-
-          <div class="col-xs-3 important-text">
-          HK$65.00
-          </div>
-        </div>
-        <div class="row">
-          <div class="row">
-            <div class="col-xs-3">
-              <div>
-                1
-              </div>
-              <div>
-                <button type="button" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
-          </div>  
-        </div>
-        <div>  
-          <div class="col-xs-6">
-            <div class="important-text">
-            S1 Set A (8pcs)
-            </div>
-            <div>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-            </div>
-          </div>
-
-          <div class="col-xs-3 important-text">
-          HK$65.00
-          </div>
-        </div>  
-
-        <div class="row">
-          <div class="row">
-            <div class="col-xs-3">
-              <div>
-                1
-              </div>
-              <div>
-                <button type="button" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
-          </div>  
-
-          <div class="col-xs-6">
-            <div class="important-text">
-            S1 Set A (8pcs)
-            </div>
-            <div>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-            </div>
-          </div>
-
-          <div class="col-xs-3 important-text">
-          HK$65.00
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-12 col-md-6 col-sm-4 checkout-btn">
-          <%= link_to "Process to Checkout", new_payment_path, :class => "btn btn-lg btn-success" %>
-          </div>
-        </div>
-
-      </div>  
-    </div>  
+  <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12">
+    <table id="order-table" class="table your-order">
+      <thead>
+        <tr class="your-order-head">
+          <th colspan="2">
+            Your Order 
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2" class="checkout-button">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <%= link_to "Process to Checkout", new_payment_path, "data-form" => "", :class => "btn btn-lg btn-success" %>
+    </div>
   </div>
-  
-
 </div>

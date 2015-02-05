@@ -1,7 +1,7 @@
  class PaymentsController < ApplicationController
 
   def new
-
+    puts params
   end
 
   def create
