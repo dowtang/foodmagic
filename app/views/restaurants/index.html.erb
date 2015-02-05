@@ -1,10 +1,10 @@
 <div class="row">
-  <h3 class="col-xs-8 col-xs-offset-2 bold-text">Order from 30 restaurants in Central</h3>
+  <h3 class="col-md-8 col-md-offset-2 col-xs-12 bold-text">Order from 30 restaurants in Central</h3>
 </div>
 
 
 <div class="row">
-  <div class="col-xs-8 col-xs-offset-2 restaurant-white-box">
+  <div class="col-md-8 col-md-offset-2 col-xs-12 restaurant-white-box">
     <!-- I WANT TO REPEAT THE FOLLOWING CODE FOR EACH ONE OF THE RESTAURANTS -->
     <% @restaurants.each do |restaurant| %>
 
@@ -52,9 +52,9 @@
               </p>
             </div>
       
-            <div class="col-xs-3">
+            <div class="col-md-3 col-xs-12 go-to-menu-btn">
 
-                <%= link_to restaurant_path(restaurant), :class => "btn btn-lg btn-success go-to-menu" do %>
+                <%= link_to restaurant_path(restaurant), :class => "btn btn-sm btn-success go-to-menu" do %>
                   Go to Menu
                   <span class="glyphicon glyphicon-chevron-right"></span>
                 <% end %>

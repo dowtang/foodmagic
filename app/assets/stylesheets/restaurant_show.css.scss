@@ -37,7 +37,9 @@
 }
 
 .restaurant-detail{
+  margin-top: 10px;
   margin-left: 0px;
+  text-align: center;
 }
 
 #menu-button ul li a{
@@ -102,4 +104,8 @@
 
 .your-order-body{
   background-color: white;
+}
+
+.checkout-btn{
+  text-align: right;
 }
