@@ -112,7 +112,7 @@
                       <td class="col-xs-8 dish-name-menu">
                         <%= dish.name %>
                       </td>
-                      <td>
+                      <td class="dish-price-checkout">
                         <%= dish.variations.first.price %>
                       </td>
                       <td class="col-xs-2">
@@ -130,7 +130,7 @@
                         <td class="col-xs-8 size-indent">
                           <%= variation.size %>
                         </td>
-                        <td>
+                        <td class="dish-price-checkout">
                           <%= variation.price %>
                         </td>
                         <td class="col-xs-2">
@@ -159,20 +159,24 @@
     <table id="order-table" class="table your-order">
       <thead>
         <tr class="your-order-head">
-          <th colspan="2">
+          <th colspan="2" id="your-order-head-title">
             Your Order 
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td colspan="2" class="checkout-button">
-          </td>
-        </tr>
       </tbody>
     </table>
-    <div>
-      <%= link_to "Process to Checkout", new_payment_path, "data-form" => "", :class => "btn btn-lg btn-success" %>
+    <div id="total-price-checkout-box">
+      <span>
+        HK$
+      </span>
+      <span id="total-price">
+        $--.--
+      </span>
+    </div>
+    <div id="restaurant-checkout-button">
+      <%= link_to "Process to Checkout", new_payment_path, :class => "btn btn-lg btn-success checkout-button-dishes" %>
     </div>
   </div>
 </div>

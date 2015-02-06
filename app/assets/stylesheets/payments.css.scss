@@ -5,6 +5,18 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#your-order-heading-payment{
+  text-align: center;
+  color:white;
+  background: rgba(1, 9, 100,1);
+  font-size: 16px;
+  padding: 8px;
+  font-weight: bold;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+
 .review-order-box{
   border-style: solid;
   border-width: 1px;
@@ -17,6 +29,10 @@
 .review-order-dark-grey{
   background-color: rgba(212, 212, 217, 1);
   /*background-color: red;*/
+}
+
+.quantity-dish{
+  text-align: center;
 }
 
 .important-text{

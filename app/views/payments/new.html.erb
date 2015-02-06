@@ -6,98 +6,53 @@
   <div class="col-xs-10 col-xs-offset-1 review-order-box">
   
     <div class="row review-order-dark-grey">
-      
-      <div class="col-xs-9 important-text">
-      Your order
+      <div id="your-order-heading-payment">
+        Your order
       </div>
-      <div class="col-xs-3 hiden-text">
-      Change order
-      </div>
-    
     </div>
 
     <div class="row">
       <table class="table table-white table-hover">
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-        
+        <thead>
+          <tr>
+            <th class="quantity-dish">Quantity</th>
+            <th></th>
+            <th>Dish Name</th>
+            <th>Size</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+          <tbody>
+            <% @variations.each do |variation| %>
+              <tr>
+                <td class="quantity-dish">
+                  1
+                </td>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  </button>
+                </td>
+                <td class="important-text">
+                  <%= variation.dish.name %>
+                </td>
+                <td class="important-text">
+                  <%= variation.size %>
+                </td>
+                <td class="important-text">
+                  <%= variation.price%>
+                </td>
+              </tr>
+            <% end %>
+        </tbody>
       </table>
-    </div>
-
-  </div>
 
 </div>
 
   <%#= form_tag payments_path do %>
-
-
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
     
