@@ -18,11 +18,18 @@
   height: 85px
 }
 
+.index-below-header-row{
+  background-color: white;
+  text-align: center;
+  margin-top: 8px;
+}
+
 .below-header-row{
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgba(156, 215, 158, 1);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: rgba(4, 17, 167,1);
+  height: 30px;
  /* border-top: solid 2px black;
   border-bottom:solid 2px black;*/
 }
@@ -34,7 +41,7 @@
 
 #button-style{
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .container{
@@ -72,11 +79,15 @@
   margin: 10px;
   padding-right: 8px;
   padding-left: 8px;
-  background: rgba(1, 9, 100,1);
+  background: rgba(4, 17, 167,1);
+}
+
+.footer-padding{
+  margin-top: 8px;
 }
 
 .main{
-  background-color: rgba(217, 255, 241, 0.6);
+  background-color: white;
   height: 100%;
   padding-bottom: 20px;
 }
@@ -95,11 +106,6 @@
 .header-order-cart{
   text-align: right;
   padding-top: 10px;
-}
-
-.bottom-footer{
-  border-top: 2px black solid;
-  border-bottom: 2px black solid;
 }
 
 .footer-contents{

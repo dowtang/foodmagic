@@ -1,0 +1,40 @@
+$(document).ready(function(){
+
+  $(".addOne").click(function(){
+    var numItemsbox = $($(this).parent().parent().children('.quantity-dish')[0]);
+    var numItems = parseInt(numItemsbox.text());
+    
+    numItemsbox.html(numItems + 1);
+  });
+
+  $(".removeOne").click(function(){
+    var numItemsbox = $($(this).parent().parent().children('.quantity-dish')[0]);
+    var numItems = parseInt(numItemsbox.text());
+    
+    numItemsbox.html(numItems - 1);
+  });
+
+  
+  $("#final-bill").click(function(){
+    console.log('hi');
+  
+    var totalItems = $('.quantity-dish').length;
+    console.log('totalItems',totalItems);
+    var total = 0;
+    
+    for (var i = 0; i < totalItems; i++) {
+      
+      var priceD = $($(".price-of-dish")[i]).text().replace('HK$','');
+      console.log('priceDish',priceD);
+      var quantityD = $($(".quantity-dish")[i]).text();
+      console.log('quantityDish',quantityD);
+      
+      total = total + (priceD * quantityD);
+      console.log('total',total);
+    }
+
+    $("#total-payment-price").text(total);
+    $(".payment-btn").html('<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="Payment" data-amount="'+total*100+'">s</script>');
+  });
+
+});

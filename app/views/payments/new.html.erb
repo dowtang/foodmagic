@@ -1,5 +1,6 @@
 <!-- this is our checkout page -->
 
+
 <div class="row review-order-text">
 
   <div class="col-xs-10 col-xs-offset-1 review-order-box">
@@ -14,7 +15,7 @@
       <table class="table table-white table-hover">
         <thead>
           <tr>
-            <th class="quantity-dish">Quantity</th>
+            <th>Quantity</th>
             <th></th>
             <th>Dish Name</th>
             <th>Size</th>
@@ -24,14 +25,12 @@
           <tbody>
             <% @variations.each do |variation| %>
               <tr>
-                <td class="quantity-dish">
-                  1
-                </td>
+                <td class="quantity-dish">1</td>
                 <td>
-                  <button type="button" class="btn btn-default btn-xs">
+                  <button type="button" class="btn btn-default btn-xs removeOne">
                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                   </button>
-                  <button type="button" class="btn btn-default btn-xs">
+                  <button type="button" class="btn btn-default btn-xs addOne">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                   </button>
                 </td>
@@ -41,13 +40,24 @@
                 <td class="important-text">
                   <%= variation.size %>
                 </td>
-                <td class="important-text">
+                <td class="important-text price-of-dish">
                   <%= variation.price%>
                 </td>
               </tr>
             <% end %>
         </tbody>
       </table>
+      <div id="total-price-checkout-box">
+        <span>
+          HK$
+        </span>
+        <span id="total-payment-price">
+          $--.--
+        </span>
+      </div>
+      <div id="restaurant-checkout-button">
+        <button type="button" class="btn btn-primary" id="final-bill">Final Bill</button>
+      </div>
 
 </div>
 
@@ -109,9 +119,6 @@
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
     <div class="payment-box">    
-      <div class="col-xs-12">
-        Amount: $65.00
-      </div>
       <div class="col-xs-12 payment-btn">
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500">s
         </script>
