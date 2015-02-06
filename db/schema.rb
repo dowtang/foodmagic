@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150205030209) do
     t.string   "mobile"
     t.string   "email"
     t.string   "comments"
+    t.string   "order_status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

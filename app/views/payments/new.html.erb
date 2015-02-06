@@ -1,103 +1,67 @@
 <!-- this is our checkout page -->
-<h1>Review Your Order</h1>
+
 
 <div class="row review-order-text">
 
   <div class="col-xs-10 col-xs-offset-1 review-order-box">
   
     <div class="row review-order-dark-grey">
-      
-      <div class="col-xs-9 important-text">
-      Your order
+      <div id="your-order-heading-payment">
+        Review Your Order
       </div>
-      <div class="col-xs-3 hiden-text">
-      Change order
-      </div>
-    
     </div>
 
     <div class="row">
       <table class="table table-white table-hover">
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default btn-xs">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </td>
-          <td class="important-text">
-            S1 Set A (8pcs)
-          </td>
-          <td>
-            Salmon Sushi (2pcs) Eel Sushi (1pc)
-          </td>
-          <td class="important-text">
-            HK$65.00
-          </td>
-        </tr>
-        
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th></th>
+            <th>Dish Name</th>
+            <th>Size</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+          <tbody>
+            <% @variations.each do |variation| %>
+              <tr>
+                <td class="quantity-dish">1</td>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs removeOne">
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs addOne">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  </button>
+                </td>
+                <td class="important-text">
+                  <%= variation.dish.name %>
+                </td>
+                <td class="important-text">
+                  <%= variation.size %>
+                </td>
+                <td class="important-text price-of-dish">
+                  <%= variation.price%>
+                </td>
+              </tr>
+            <% end %>
+        </tbody>
       </table>
-    </div>
-
-  </div>
+      <div id="total-price-checkout-box">
+        <span>
+          HK$
+        </span>
+        <span id="total-payment-price">
+          $--.--
+        </span>
+      </div>
+      <div id="restaurant-checkout-button">
+        <button type="button" class="btn btn-primary" id="final-bill">Final Bill</button>
+      </div>
 
 </div>
 
   <%#= form_tag payments_path do %>
-
-
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
     
@@ -155,9 +119,6 @@
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
     <div class="payment-box">    
-      <div class="col-xs-12">
-        Amount: $65.00
-      </div>
       <div class="col-xs-12 payment-btn">
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500">s
         </script>

@@ -3,6 +3,8 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function(){
 
+  var variationIds = []
+
   $(".append-to").on('click',function () {
     // var dow = $(this).attr("data-price");
     
@@ -13,7 +15,33 @@ $(document).ready(function(){
     // console.log(dow);
     // $('.row.your-order-head').append(dow);
     $('#order-table > tbody').append('<tr class="your-order-body"><td class="col-xs-9">'+ name +'</td><td class="col-xs-3">'+ price +'</td></tr>');
+
+    var id = $(this).data("id")
+
+    variationIds.push(id)
+
+    var url = $(".checkout-button-dishes").attr("href", "/payments/new?variations="+variationIds)
+
+    console.log(url)
+
+
+    console.log(variationIds)
   
+  });
+
+  var dishPrices = []
+
+  $(".append-to").on('click',function () {
+  
+    var price = $(this).data("price").replace('HK$','');
+
+    dishPrices.push(Number(price))
+
+    var total = dishPrices.reduce(function(a, b){return a + b;
+    });
+
+    $('#total-price').text(total);
+
   });
   
   $("#menu-button-menu").click(function(){

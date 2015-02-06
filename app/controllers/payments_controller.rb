@@ -1,7 +1,15 @@
  class PaymentsController < ApplicationController
 
   def new
-    puts params
+    full_cart = params[:variations]
+    # variationId = params[:variations]
+    # params[:variations].all.each do |variation|
+      # console.log(variation)
+    # end
+    @variations = Variation.where(:id => full_cart.split(","))
+
+    # variationIds.each do |variationId|
+      # variationID.
   end
 
   def create
